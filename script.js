@@ -8,10 +8,10 @@ var movies = [
     desc: 'Każdy zna Króla Lwa:)'
   }
 ];
-var moviesElements = movies.map(function(movie){
+var moviesElements = movies.map(function(movies){
         return React.createElement('li', {},
-                    React.createElement('h2', {}, movie.title),
-                    React.createElement('p', {}, movie.desc)
+                    React.createElement('h2', {}, movies.title),
+                    React.createElement('p', {}, movies.desc)
                 ),
     });
 var element = 
