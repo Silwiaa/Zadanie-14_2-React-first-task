@@ -1,19 +1,21 @@
 var movies = [
   {
+    id: 1,
     title: 'Harry Potter',
     desc: 'Film o czarodzieju'
   },
   {
+    id: 2,
     title: 'Król Lew',
     desc: 'Każdy zna Króla Lwa:)'
   }
 ];
-var moviesElements = movies.map(function(movies){
-        return React.createElement('li', {},
-                    React.createElement('h2', {}, movies.title),
-                    React.createElement('p', {}, movies.desc)
-                ),
-    });
+var moviesElements = movies.map(function(movie) {
+        return React.createElement('li', {key:movie.id},
+                    React.createElement('h2', {}, movie.title),
+                    React.createElement('p', {}, movie.desc)
+        );
+});
 var element = 
     React.createElement('div', {},
         React.createElement('h1', {}, 'Lista filmów'),
