@@ -21,17 +21,19 @@ var movies = [
         desc: 'Film opowiadający o zabawkach chłopca imieniem Andy'
       }
 ];
-var element = 
-    React.createElement('div', {},
-        React.createElement('h1', {}, 'Lista filmów'),
-        React.createElement('ul', {}, moviesElements)
-    );
+
 var moviesElements = movies.map(function(movie) {
         return React.createElement('li', {key: movie.id},
                 React.createElement('h2', {}, movie.title),
                 React.createElement('p', {}, movie.desc),
                 //React.createElement('img', {}, //movie.img_src)
-        ),
+        );
 });
+
+var element = 
+    React.createElement('div', {},
+        React.createElement('h1', {}, 'Lista filmów'),
+        React.createElement('ul', {}, moviesElements)
+    );
                                
 ReactDOM.render(element, document.getElementById('app'));
